@@ -4,7 +4,7 @@ export const bio = [
 ];
 
 export const skills = [
-  "Highly proficient cnc programming using solidcam, mastercam"
+  "Highly proficient cnc programming using solidcam, mastercam",
   "SolidWorks",
   "Soldering, 3D Printing, python programming, excel+VBA",
 ];
@@ -24,9 +24,8 @@ export const experience = [
     duration: "April 2022 - Jul 2023",
     subtitle: "CNC Programmer",
     details: [
-      "SolidCAM programming okuma big and okuma small, programming robot, ordering and maintaining stock levels"
+      "SolidCAM programming okuma big and okuma small, programming robot, ordering and maintaining stock levels",
     ],
-
     icon: "heartbeat",
   },
   {
@@ -34,7 +33,7 @@ export const experience = [
     duration: "June 2020 - April 2022",
     subtitle: "CNC Machinist",
     details: [
-      "Mastercam programming of CNC, wire-edm, mill-turn lathes"
+      "Mastercam programming of CNC, wire-edm, mill-turn lathes",
     ],
     icon: "qrcode",
   },
@@ -56,8 +55,6 @@ export const education = [
     duration: "2016 - 2020",
     subtitle: "University of Technology, Sydney",
     details: [],
-    tags: [
-    ],
     icon: "graduation-cap",
   },
   {
