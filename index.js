@@ -3,8 +3,6 @@ import {
   skills,
   education,
   experience,
-  trekking,
-  footer,
 } from "./user-data/data.js";
 
 import { URLs } from "./user-data/urls.js";
