@@ -603,6 +603,21 @@ body.offcanvas .colorlib-nav-toggle {
 	position: relative;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 .colorlib-heading {
 	font-size: 18px;
 	margin-bottom: 2em;
