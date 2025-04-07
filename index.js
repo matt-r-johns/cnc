@@ -311,14 +311,17 @@ function populateExp_Edu(items, id) {
       divTimelineLabel.append(pTimelineText);
     }
 
-    let divTags = document.createElement("div");
-    for (let j = 0; j < items[i].tags.length; j++) {
-      let spanTags = document.createElement("span");
-      spanTags.className = "badge";
-      spanTags.innerHTML = items[i].tags[j];
-      divTags.append(spanTags);
+    if (items[i].tags && items[i].tags.length) {
+      let divTags = document.createElement("div");
+      for (let j = 0; j < items[i].tags.length; j++) {
+        let spanTags = document.createElement("span");
+        spanTags.className = "badge";
+        spanTags.innerHTML = items[i].tags[j];
+        divTags.append(spanTags);
+      }
+      divTimelineLabel.append(divTags);
     }
-    divTimelineLabel.append(divTags);
+
 
     let iFa = document.createElement("i");
     iFa.className = "fa fa-" + items[i].icon;
