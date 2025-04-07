@@ -1,12 +1,12 @@
 export const bio = [
   "Hello, I'm Matt Johns!",
-  "write a personal blurb, short introduction",
+  "Applications Engineer & CNC Programmer with a passion for automation and high-precision manufacturing.",
 ];
 
 export const skills = [
-  "Highly proficient cnc programming using solidcam, mastercam",
+  "Highly proficient CNC programming using SolidCAM, Mastercam",
   "SolidWorks",
-  "Soldering, 3D Printing, python programming, excel+VBA",
+  "Soldering, 3D Printing, Python programming, Excel + VBA",
 ];
 
 export const experience = [
@@ -17,14 +17,14 @@ export const experience = [
     details: [
       "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
     ],
-    icon: "truck ",
+    icon: "truck",
   },
   {
     title: "QE Innovations",
     duration: "April 2022 - Jul 2023",
     subtitle: "CNC Programmer",
     details: [
-      "SolidCAM programming okuma big and okuma small, programming robot, ordering and maintaining stock levels",
+      "SolidCAM programming for Okuma machines, robot programming, stock management and procurement.",
     ],
     icon: "heartbeat",
   },
@@ -33,44 +33,42 @@ export const experience = [
     duration: "June 2020 - April 2022",
     subtitle: "CNC Machinist",
     details: [
-      "Mastercam programming of CNC, wire-edm, mill-turn lathes",
+      "Mastercam programming of CNCs, wire-EDM, and mill-turn lathes.",
     ],
     icon: "qrcode",
   },
   {
     title: "ANSTO (The Australian Nuclear Science and Technology Organisation)",
     duration: "May 2019 - June 2019",
-    subtitle: "CNC Machininst / Apprentice",
+    subtitle: "CNC Machinist / Apprentice",
     details: [
-      "completed apprenticeship",
+      "Completed apprenticeship and hands-on CNC training.",
     ],
     icon: "group",
   },
 ];
 
-
 export const education = [
   {
-    title: "Uni - unfinished",
-    duration: "2016 - 2020",
-    subtitle: "University of Technology, Sydney",
+    title: "University of Technology, Sydney",
+    duration: "2016 - 2020 (unfinished)",
+    subtitle: "Bachelor's Program",
     details: [],
+    tags: [],
     icon: "graduation-cap",
   },
   {
     title: "Ultimo TAFE",
     duration: "",
-    subtitle: "Certificate 4",
+    subtitle: "Certificate IV in Engineering",
     details: [],
     icon: "book",
   },
-    {
+  {
     title: "Ultimo TAFE",
     duration: "",
-    subtitle: "Certificate 3",
+    subtitle: "Certificate III in Engineering - Mechanical Trade",
     details: [],
     icon: "book",
   },
 ];
-
-
