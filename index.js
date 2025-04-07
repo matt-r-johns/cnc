@@ -96,21 +96,7 @@ function populateSkills(items, id) {
   });
 }
 
-function populateTrekking(items) {
-  const skillsTag = document.getElementById('trekking');
-  items.forEach((item) => {
-    const h3 = getElement("li", null);
-    h3.innerHTML = item;
 
-    const divProgressWrap = getElement("div", "progress-wrap");
-    divProgressWrap.append(h3);
-
-    const divAnimateBox = getElement("div", "col-md-12 animate-box");
-    divAnimateBox.append(divProgressWrap);
-
-    skillsTag.append(divAnimateBox);
-  });
-}
 
 function populateBlogs(items, id) {
   const projectdesign = document.getElementById(id);
@@ -311,16 +297,16 @@ function populateExp_Edu(items, id) {
       divTimelineLabel.append(pTimelineText);
     }
 
-    if (items[i].tags && items[i].tags.length) {
-      let divTags = document.createElement("div");
-      for (let j = 0; j < items[i].tags.length; j++) {
-        let spanTags = document.createElement("span");
-        spanTags.className = "badge";
-        spanTags.innerHTML = items[i].tags[j];
-        divTags.append(spanTags);
-      }
-      divTimelineLabel.append(divTags);
-    }
+   // if (items[i].tags && items[i].tags.length) {
+   // let divTags = document.createElement("div");
+   //   for (let j = 0; j < items[i].tags.length; j++) {
+   //     let spanTags = document.createElement("span");
+   //     spanTags.className = "badge";
+   //     spanTags.innerHTML = items[i].tags[j];
+   //     divTags.append(spanTags);
+   //   }
+   //   divTimelineLabel.append(divTags);
+   // }
 
 
     let iFa = document.createElement("i");
@@ -453,7 +439,4 @@ fetchReposFromGit(gitRepo);
 fetchGitConnectedData(gitConnected);
 
 populateExp_Edu(experience, "experience");
-populateTrekking(trekking);
 populateExp_Edu(education, "education");
-
-populateLinks(footer, "footer");
