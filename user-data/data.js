@@ -72,3 +72,10 @@ export const education = [
     icon: "book",
   },
 ];
+
+export const quals = [
+  "Forklift License",
+  "First Aid Certificate",
+  "Lean Six Sigma Yellow Belt",
+];
+
