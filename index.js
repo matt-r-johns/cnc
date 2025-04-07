@@ -3,6 +3,7 @@ import {
   skills,
   education,
   experience,
+  quals,
 } from "./user-data/data.js";
 
 import { URLs } from "./user-data/urls.js";
@@ -218,6 +219,20 @@ function populateLinks(items, id) {
   });
 }
 
+function populateQuals(items, id) {
+  const container = document.getElementById(id);
+  const ul = document.createElement("ul");
+
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+
+  container.appendChild(ul);
+}
+
+
 function getElement(tagName, className) {
   let item = document.createElement(tagName);
   item.className = className;
@@ -263,7 +278,7 @@ populateSkills(skills, "skills");
 fetchBlogsFromMedium(medium);
 fetchReposFromGit(gitRepo);
 fetchGitConnectedData(gitConnected);
-populateQuals(quals);
+populateQuals(quals, "quals");
 
 populateExp_Edu(experience, "experience");
 populateExp_Edu(education, "education");
