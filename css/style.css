@@ -928,7 +928,7 @@ body.offcanvas .colorlib-nav-toggle {
 	height: 0;
 	border-style: solid;
 	border-width: 9px 9px 9px 0;
-	border-color: transparent #f2f3f7 transparent transparent;
+	border-color: transparent #ff0000 transparent transparent;
 	left: 0;
 	top: 10px;
 	margin-left: -9px;
@@ -1157,7 +1157,7 @@ body.offcanvas .colorlib-nav-toggle {
 	height: 50px;
 	display: table;
 	text-align: center;
-	background: #f2f3f7;
+	background: #00f7ff;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-ms-border-radius: 2px;
