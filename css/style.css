@@ -51,7 +51,7 @@ p {
 }
 x {
 	margin-bottom: 1.5em;
-	background-color: darkkhaki;
+	background-color: rgb(107, 189, 144);
 	backface-visibility: visible;
 }
 
@@ -123,7 +123,7 @@ figure figcaption {
 	width: 300px;
 	position: fixed;
 	z-index: 1001;
-	background: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+	background: linear-gradient(135deg, rgb(201, 216, 203), rgb(63, 190, 249));
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
@@ -138,7 +138,7 @@ figure figcaption {
 		-o-transform: translateX(-300px);
 		transform: translateX(-300px);
 		padding-top: 4em;
-		background-color: #f9bf3f;
+		background-color: #373064;
 		height: -webkit-fill-available;
 		left: 0px;
 	}
