@@ -12,7 +12,7 @@ export const skills = [
 export const experience = [
   {
     title: "SolidCAM UK",
-    duration: "April 2024 - Present",
+    duration: "Apr 2024 - Present",
     subtitle: "Applications Engineer",
     details: [
       "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
@@ -21,7 +21,7 @@ export const experience = [
   },
   {
     title: "QE Innovations",
-    duration: "April 2022 - Jul 2023",
+    duration: "Oct 2022 - Apr 2024",
     subtitle: "CNC Programmer",
     details: [
       "SolidCAM programming for Okuma machines, robot programming, stock management and procurement.",
@@ -30,48 +30,47 @@ export const experience = [
   },
   {
     title: "RØDE Microphones",
-    duration: "June 2020 - April 2022",
+    duration: "Feb 2021 - Oct 2022",
     subtitle: "CNC Machinist",
     details: [
       "Mastercam programming of CNCs, wire-EDM, and mill-turn lathes.",
     ],
-    icon: "qrcode",
+    icon: "microphone",
   },
   {
     title: "ANSTO (The Australian Nuclear Science and Technology Organisation)",
-    duration: "May 2019 - June 2019",
+    duration: "Feb 2016 - Feb 2021",
     subtitle: "CNC Machinist / Apprentice",
     details: [
       "Completed apprenticeship and hands-on CNC training.",
     ],
-    icon: "group",
+    icon: "radiation",
   },
 ];
 
 export const education = [
   {
-    title: "Ultimo TAFE",
+    title: "Ultimo TAFE, Sydney",
     duration: "Feb 2017 - Feb 2018",
-    subtitle: "Certificate IV Mechanical Engineering<br>Testing Testing",
+    subtitle: "Certificate IV Mechanical Engineering<br>CNC Machining and CAD/CAM",
+    details: [],
+    icon: "book",
+  },  
+  {
+    title: "Ultimo TAFE, Sydney",
+    duration: "Feb 2016 - Dec 2019",
+    subtitle: "Certificate III Mechanical Engineering<br>Fitting and Machining",
     details: [],
     icon: "book",
   },
   {
-    title: "University of Technology, Sydney",
-    duration: "2016 - 2020 (unfinished)",
-    subtitle: "Bachelor's Program",
+    title: "University of Technology Sydney",
+    duration: "2011 - 2016 (Incomplete)",
+    subtitle: "Bachelor of Mechanical and Mechatronics Engineering",
     details: [],
     tags: [],
     icon: "graduation-cap",
   },
-  {
-    title: "Ultimo TAFE",
-    duration: "",
-    subtitle: "Certificate IV in Engineering",
-    details: [],
-    icon: "book",
-  },
-
 ];
 
 export const quals = [
