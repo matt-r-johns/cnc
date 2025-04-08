@@ -17,7 +17,7 @@ export const experience = [
     details: [
       "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
     ],
-    icon: "fa-laptop-code",
+    icon: "laptop-code",
   },
   {
     title: "QE Innovations",
@@ -26,7 +26,7 @@ export const experience = [
     details: [
       "SolidCAM programming for Okuma machines, robot programming, stock management and procurement.",
     ],
-    icon: "fa-person-digging",
+    icon: "person-digging",
   },
   {
     title: "RØDE Microphones",
