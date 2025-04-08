@@ -226,7 +226,7 @@ figure figcaption {
 /* menu sub headings left side  */
 
 #colorlib-aside #colorlib-main-menu ul li a {
-	color: #2c98f0;
+	color: #000000;
 	text-decoration: none;
 	position: relative;
 	padding: 10px 0;
@@ -869,17 +869,19 @@ body.offcanvas .colorlib-nav-toggle {
 	-ms-border-radius: 50%;
 	border-radius: 50%;
 	text-align: center;
-	-moz-box-shadow: 0 0 0 5px #f2f3f7;
-	-webkit-box-shadow: 0 0 0 5px #f2f3f7;
-	box-shadow: 0 0 0 5px #f2f3f7;
+	-moz-box-shadow: 0 0 0 5px #74bd7ec0;
+	-webkit-box-shadow: 0 0 0 5px #74bd7ec0;
+	box-shadow: 0 0 0 5px #74bd7ec0;
 	line-height: 40px;
 	float: left;
 }
+/* round logo timeline button, above is shadow */
+
 .timeline-centered
 	.timeline-entry
 	.timeline-entry-inner
 	.timeline-icon.color-2 {
-	background: #3c3f41;
+	background: #888a8b;
 	color: white;
 }
 .timeline-centered
