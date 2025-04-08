@@ -669,7 +669,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .hire {
 	padding: 2em;
-	background: #f9bf3f;
+	background: #f93f3f;
 	color: #000;
 	border-radius: 4px;
 }
@@ -905,7 +905,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
 	position: relative;
-	background: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+	background: linear-gradient(135deg, rgb(29, 218, 218), rgb(255, 255, 255));
 	color: #000;
 	padding: 1.5em;
 	margin-left: 60px;
@@ -1886,7 +1886,7 @@ ul {
 	padding-left: 0px;
 	padding-right: 0px;
 	/* background: #f9bf3f; */
-	border: 1px solid #f9bf3f;
+	border: 1px solid #f93fb2;
 	color: #000;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
