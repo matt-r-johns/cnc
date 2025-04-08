@@ -4,7 +4,7 @@ export const bio = [
 ];
 
 export const skills = [
-  "Highly proficient with SolidCAM, Mastercam and TopSolid",
+  "Highly proficient with SolidCAM, Mastercam and TopSolid - everything from 2D Wire-EDM to Multi-Axis Finishing operations",
   "Highly proficient with SolidWorks",
   "Experience with CGTech Vericut for toolpath simulation and verification",
   "Extensive practical experience with 3D printing, soldering of electronic components and ....",
@@ -17,6 +17,11 @@ export const experience = [
     duration: "Apr 2024 - Present",
     subtitle: "Applications Engineer",
     details: [
+      "My role as an Applications Engineer has been a source of great personal and technical growth, giving me exposure to some truly niche and highly technical areas of the manufacturing industry.",
+      "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
+      "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
+      "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
+      "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
       "Training, Post Processor writing and modification, on-site applications support, create and maintain training materials, build systems.",
     ],
     icon: "laptop-code",
@@ -35,7 +40,12 @@ export const experience = [
     duration: "Feb 2021 - Oct 2022",
     subtitle: "CNC Machinist",
     details: [
-      "Mastercam programming of CNCs, wire-EDM, and mill-turn lathes.",
+      "Rode Microphones is a world leader in audio technology. They produce dozens of injection moulds per year in their state of the art toolroom located in Sydney Australia.",
+      "I was responsible for producing all Wire-EDM and CNC + manual turning work in the toolroom, along with some 5-axis milling where required. Using Mastercam I would program and operate the following machines daily:",
+      "Nakamura AS-200Y 4-Axis Lathe with Live Tooling",
+      "Makino U3 Wire-EDM 4-Axis",
+      "Makino PS-105 3-Axis Mill",
+      "Zeiss CMM",
     ],
     icon: "microphone",
   },
@@ -82,6 +92,6 @@ export const quals = [
   "Confined Space + Operate Breathing Apparatus",
   "Elevated Work Platform",
   "Swagelok Training - Tube Fitting and Hand Tube Bending",
-
+  "White Card",
 ];
 
