@@ -180,13 +180,13 @@ Accordion.prototype.dropdown = function (e) {
 
 var accordion = new Accordion($("#accordion"), false);
 
-function enableDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
+// function enableDarkMode() {
+//   document.body.classList.toggle("dark-mode");
+// }
 
-function detectDayNightMode() {
-  const hours = new Date().getHours();
-  if (hours <= 6 || hours >= 20) {
-    enableDarkMode();
-  }
-}
+// function detectDayNightMode() {
+//   const hours = new Date().getHours();
+//   if (hours <= 6 || hours >= 20) {
+//     enableDarkMode();
+//   }
+// }

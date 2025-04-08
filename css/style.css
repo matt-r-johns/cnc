@@ -920,6 +920,9 @@ body.offcanvas .colorlib-nav-toggle {
 	border-radius: 10px;
 }
 
+
+/* work experience arrow  */
+
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
 	content: "";
 	display: block;
@@ -928,7 +931,7 @@ body.offcanvas .colorlib-nav-toggle {
 	height: 0;
 	border-style: solid;
 	border-width: 9px 9px 9px 0;
-	border-color: transparent #d9dee0b0 transparent transparent;
+	border-color: transparent #8ab7eb transparent transparent;
 	left: 0;
 	top: 10px;
 	margin-left: -9px;
