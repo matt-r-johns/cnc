@@ -52,7 +52,8 @@ export const education = [
   {
     title: "Ultimo TAFE",
     duration: "Feb 2017 - Feb 2018",
-    subtitle: ["Certificate IV Mechanical Engineering",
+    subtitle: [
+      "Certificate IV Mechanical Engineering",
       "Testing Testing ",
 
     ]
