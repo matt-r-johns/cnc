@@ -833,7 +833,7 @@ body.offcanvas .colorlib-nav-toggle {
 	position: absolute;
 	display: block;
 	width: 4px;
-	background: #e0e0e0;
+	background: #fd0808;
 	top: 20px;
 	bottom: 20px;
 	margin-left: 29px;
@@ -902,10 +902,10 @@ body.offcanvas .colorlib-nav-toggle {
 	height: 20px;
 	margin-left: 10px;
 }
-
+/* work experience gradient box */
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
 	position: relative;
-	background: linear-gradient(135deg, #2c98f0, #aed5f5);
+	background: linear-gradient(135deg, #3a9beb96, #55647091);
 	color: #000;
 	padding: 1.5em;
 	margin-left: 60px;
