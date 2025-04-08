@@ -54,10 +54,22 @@ function populateExp_Edu(items, id) {
     divTimelineLabel.append(spanTimelineSublabel);
 
     for (let j = 0; j < items[i].details.length; j++) {
-      let pTimelineText = document.createElement("p");
-      pTimelineText.className = "timeline-text";
-      pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
-      divTimelineLabel.append(pTimelineText);
+      let detail = items[i].details[j];
+      if (Array.isArray(detail)) {
+        let ul = document.createElement("ul");
+        detail.forEach(point => {
+          let li = document.createElement("li");
+          li.innerHTML = point;
+          ul.appendChild(li);
+        });
+        divTimelineLabel.appendChild(ul);
+      } else {
+        let pTimelineText = document.createElement("p");
+        pTimelineText.className = "timeline-text";
+        pTimelineText.innerHTML = detail;
+        divTimelineLabel.appendChild(pTimelineText);
+      }
+      
     }
 
     let iFa = document.createElement("i");
