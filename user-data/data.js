@@ -77,8 +77,8 @@ export const education = [
   },
   {
     title: "University of Technology Sydney",
-    duration: "2011 - 2016 (Incomplete)",
-    subtitle: "Bachelor of Mechanical and Mechatronics Engineering",
+    duration: "2011 - 2013",
+    subtitle: "(Incomplete) Bachelor of Mechanical and Mechatronics Engineering",
     details: [],
     tags: [],
     icon: "graduation-cap",
