@@ -869,9 +869,9 @@ body.offcanvas .colorlib-nav-toggle {
 	-ms-border-radius: 50%;
 	border-radius: 50%;
 	text-align: center;
-	-moz-box-shadow: 0 0 0 5px #74bd7ec0;
-	-webkit-box-shadow: 0 0 0 5px #74bd7ec0;
-	box-shadow: 0 0 0 5px #74bd7ec0;
+	-moz-box-shadow: 0 0 0 5px #74bd7e00;
+	-webkit-box-shadow: 0 0 0 5px #74bd7e00;
+	box-shadow: 0 0 0 5px #74bd7e00;
 	line-height: 40px;
 	float: left;
 }
