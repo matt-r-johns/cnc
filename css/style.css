@@ -616,7 +616,7 @@ body.offcanvas .colorlib-nav-toggle {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
 }
 
 
@@ -794,15 +794,15 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .panel-heading a.collapsed {
-	background: #f2f3f7;
-	border: 1px solid #e6e6e6 !important;
+	background: #0033ff;
+	border: 1px solid #9f38ff !important;
 	color: #333333;
 }
 
 .panel-body {
 	padding: 1.5em;
 	margin-top: 5px;
-	border: 1px solid #e6e6e6 !important;
+	border: 1px solid #ff9900 !important;
 }
 
 .timeline-centered {
