@@ -97,12 +97,98 @@ hr {
 	border-top: 1px solid #000;
 }
 
+/* ========== Layout Essentials ========== */
+#colorlib-page {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#colorlib-aside {
+	float: left;
+	width: 300px;
+	position: fixed;
+	z-index: 1001;
+	padding-top: 3em;
+	background: linear-gradient(135deg, rgb(201, 216, 203), rgb(63, 190, 249));
+}
+
+#colorlib-main {
+	width: calc(100% - 300px);
+	float: right;
+	transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+	#colorlib-aside {
+		width: 100%;
+		position: relative;
+		float: none;
+		background-color: #373064;
+	}
+	#colorlib-main {
+		width: 100%;
+		float: none;
+		padding: 0 1em;
+	}
+}
+
+/* Timeline layout fix */
+.timeline-centered {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.timeline-centered:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 4px;
+	background: #fd0808;
+	top: 20px;
+	bottom: 20px;
+	margin-left: 29px;
+}
+
+.timeline-centered .timeline-entry {
+	position: relative;
+	margin: 5px 0 10px 30px;
+	clear: both;
+}
+
+.timeline-centered .timeline-entry-inner {
+	position: relative;
+	margin-left: -20px;
+}
+
+.timeline-centered .timeline-entry-inner .timeline-icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: #2c98f0;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	box-shadow: 0 0 0 5px #f2f3f7;
+}
+
+.timeline-centered .timeline-entry-inner .timeline-label {
+	position: relative;
+	background: linear-gradient(135deg, #3a9beb96, #55647091);
+	color: #000;
+	padding: 1.5em;
+	margin-left: 60px;
+	border-radius: 10px;
+}
+
+/* Print mode fixes */
 @media print {
 	.no-print,
 	.no-print * {
 		display: none !important;
 	}
-
+	
 	#colorlib-main {
 		float: left;
 		width: 100%;
@@ -111,11 +197,7 @@ hr {
 	.timeline-label {
 		margin-left: 0 !important;
 	}
-
 	.timeline-icon {
 		display: none !important;
 	}
 }
-
-/* Additional sections (sidebar, timeline, services, etc.)
-   remain untouched. Let me know if you want those optimized too. */
