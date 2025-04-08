@@ -872,14 +872,14 @@ body.offcanvas .colorlib-nav-toggle {
 	.timeline-entry
 	.timeline-entry-inner
 	.timeline-icon.color-2 {
-	background: brown;
+	background: rgb(143, 240, 87);
 	color: white;
 }
 .timeline-centered
 	.timeline-entry
 	.timeline-entry-inner
 	.timeline-icon.color-3 {
-	background: #f9bf3f;
+	background: #f93fab;
 }
 .timeline-centered
 	.timeline-entry
