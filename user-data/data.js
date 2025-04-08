@@ -1,6 +1,6 @@
 export const bio = [
-  "Hello, I'm Matt Johns!",
-  "Applications Engineer & CNC Programmer with a passion for automation and high-precision manufacturing.",
+  "Hello, I'm Matt Johns,",
+  "Applications Engineer & CNC Programmer with a passion for high-precision manufacturing.",
 ];
 
 export const skills = [
@@ -50,6 +50,16 @@ export const experience = [
 
 export const education = [
   {
+    title: "Ultimo TAFE",
+    duration: "Feb 2017 - Feb 2018",
+    subtitle: ["Certificate IV Mechanical Engineering",
+      "Testing Testing ",
+
+    ]
+    details: [],
+    icon: "book",
+  },
+  {
     title: "University of Technology, Sydney",
     duration: "2016 - 2020 (unfinished)",
     subtitle: "Bachelor's Program",
@@ -64,18 +74,16 @@ export const education = [
     details: [],
     icon: "book",
   },
-  {
-    title: "Ultimo TAFE",
-    duration: "",
-    subtitle: "Certificate III in Engineering - Mechanical Trade",
-    details: [],
-    icon: "book",
-  },
+
 ];
 
 export const quals = [
+  "Lean Six Sigma White Belt",
   "Forklift License",
-  "First Aid Certificate",
-  "Lean Six Sigma Yellow Belt",
+  "Overhead Crane (Dogman's) License",
+  "Confined Space + Operate Breathing Apparatus",
+  "Elevated Work Platform",
+  "Swagelok Training - Tube Fitting and Hand Tube Bending",
+
 ];
 
