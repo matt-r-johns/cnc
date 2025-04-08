@@ -905,7 +905,7 @@ body.offcanvas .colorlib-nav-toggle {
 	width: 20px;
 	height: 20px;
 	margin-left: 10px;
-
+}
 /* work experience gradient box */
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
@@ -2101,27 +2101,27 @@ span {
     text-align: center;
     background-color: brown !important;
     border-radius: 10px;
-}
+	}
 
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid #000 !important;
-}
+	hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #000 !important;
+	}
 
-  hr {
-    border: 0;
-    border-top: 1px solid #e0e0e0;
-    margin: 20px 0;
-  }
+	hr {
+	border: 0;
+	border-top: 1px solid #e0e0e0;
+	margin: 20px 0;
+	}
 
-  strong {
+	strong {
 	color: #000;
-  }
+	}
 
-  .dark-mode {
+	.dark-mode {
 	strong {
 		color: #f9bf3f;
 	}
-  }
+	}
