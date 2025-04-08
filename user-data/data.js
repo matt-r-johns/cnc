@@ -4,9 +4,11 @@ export const bio = [
 ];
 
 export const skills = [
-  "Highly proficient CNC programming using SolidCAM, Mastercam",
-  "SolidWorks",
-  "Soldering, 3D Printing, Python programming, Excel + VBA",
+  "Highly proficient with SolidCAM, Mastercam and TopSolid",
+  "Highly proficient with SolidWorks",
+  "Experience with CGTech Vericut for toolpath simulation and verification",
+  "Extensive practical experience with 3D printing, soldering of electronic components and ....",
+  "Intermediate knowledge of Python programming and VBA for automating Windows-based tasks",
 ];
 
 export const experience = [
@@ -26,7 +28,7 @@ export const experience = [
     details: [
       "SolidCAM programming for Okuma machines, robot programming, stock management and procurement.",
     ],
-    icon: "person-digging",
+    icon: "wrench",
   },
   {
     title: "RØDE Microphones",
