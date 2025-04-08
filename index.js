@@ -6,9 +6,7 @@ import {
   quals,
 } from "./user-data/data.js";
 
-  // added title of page
-  window.parent.document.title = name;
-
+  document.title = "Matt Johns – CNC Programmer";
 
 function populateBio(items, id) {
   const bioTag = document.getElementById(id);
@@ -198,13 +196,7 @@ function getElement(tagName, className) {
 // }
 
 populateBio(bio, "bio");
-
 populateSkills(skills, "skills");
-
-fetchBlogsFromMedium(medium);
-fetchReposFromGit(gitRepo);
-fetchGitConnectedData(gitConnected);
 populateQuals(quals, "quals");
-
 populateExp_Edu(experience, "experience");
 populateExp_Edu(education, "education");
