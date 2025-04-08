@@ -6,71 +6,9 @@ import {
   quals,
 } from "./user-data/data.js";
 
-import { URLs } from "./user-data/urls.js";
-
-const { medium, gitConnected, gitRepo } = URLs;
-
-async function fetchBlogsFromMedium(url) {
-  try {
-    const response = await fetch(url);
-    const { items } = await response.json();
-    populateBlogs(items, "blogs");
-  } catch (error) {
-    throw new Error(
-      `Error in fetching the blogs from Medium profile: ${error}`
-    );
-  }
-}
-
-async function fetchReposFromGit(url) {
-  try {
-    const response = await fetch(url);
-    const items = await response.json();
-    populateRepo(items, "repos");
-  } catch (error) {
-    throw new Error(`Error in fetching the blogs from repos: ${error}`);
-  }
-}
-
-async function fetchGitConnectedData(url) {
-  try {
-    const response = await fetch(url);
-    console.log(response);
-    const { basics } = await response.json();
-    // populateBlogs(items, "blogs");
-    mapBasicResponse(basics);
-  } catch (error) {
-    throw new Error(`Error in fetching the blogs from git connected: ${error}`);
-  }
-}
-
-function mapBasicResponse(basics) {
-  const {
-    name,
-    label,
-    image,
-    email,
-    phone,
-    url,
-    summary,
-    profiles,
-    headline,
-    blog,
-    yearsOfExperience,
-    username,
-    locationAsString,
-    region,
-    karma,
-    id,
-    followers,
-    following,
-    picture,
-    website,
-  } = basics;
-
   // added title of page
   window.parent.document.title = name;
-}
+
 
 function populateBio(items, id) {
   const bioTag = document.getElementById(id);
@@ -123,18 +61,6 @@ function populateExp_Edu(items, id) {
       pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
       divTimelineLabel.append(pTimelineText);
     }
-
-   // if (items[i].tags && items[i].tags.length) {
-   // let divTags = document.createElement("div");
-   //   for (let j = 0; j < items[i].tags.length; j++) {
-   //     let spanTags = document.createElement("span");
-   //     spanTags.className = "badge";
-   //     spanTags.innerHTML = items[i].tags[j];
-   //     divTags.append(spanTags);
-   //   }
-   //   divTimelineLabel.append(divTags);
-   // }
-
 
     let iFa = document.createElement("i");
     iFa.className = "fa fa-" + items[i].icon;
@@ -206,16 +132,16 @@ function populateLinks(items, id) {
       footer.append(span);
     }
 
-    if (item.label === "copyright-text") {
-      let div = document.createElement("div");
-      div.className = "copyright-text no-print";
-      item.data.forEach(function (copyright) {
-        let p = document.createElement("p");
-        p.innerHTML = copyright;
-        div.append(p);
-      });
-      footer.append(div);
-    }
+    // if (item.label === "copyright-text") {
+    //   let div = document.createElement("div");
+    //   div.className = "copyright-text no-print";
+    //   item.data.forEach(function (copyright) {
+    //     let p = document.createElement("p");
+    //     p.innerHTML = copyright;
+    //     div.append(p);
+    //   });
+    //   footer.append(div);
+    // }
   });
 }
 
@@ -239,37 +165,37 @@ function getElement(tagName, className) {
   return item;
 }
 
-function getBlogDate(publishDate) {
-  const elapsed = Date.now() - Date.parse(publishDate);
+// function getBlogDate(publishDate) {
+//   const elapsed = Date.now() - Date.parse(publishDate);
 
-  // Time conversions in milliseconds
-  const msPerSecond = 1000;
-  const msPerMinute = msPerSecond * 60;
-  const msPerHour = msPerMinute * 60;
-  const msPerDay = msPerHour * 24;
-  const msPerMonth = msPerDay * 30;
-  const msPerYear = msPerDay * 365;
+//   // Time conversions in milliseconds
+//   const msPerSecond = 1000;
+//   const msPerMinute = msPerSecond * 60;
+//   const msPerHour = msPerMinute * 60;
+//   const msPerDay = msPerHour * 24;
+//   const msPerMonth = msPerDay * 30;
+//   const msPerYear = msPerDay * 365;
 
-  if (elapsed < msPerMinute) {
-    const seconds = Math.floor(elapsed / msPerSecond);
-    return `${seconds} seconds ago`;
-  } else if (elapsed < msPerHour) {
-    const minutes = Math.floor(elapsed / msPerMinute);
-    return `${minutes} minutes ago`;
-  } else if (elapsed < msPerDay) {
-    const hours = Math.floor(elapsed / msPerHour);
-    return `${hours} hours ago`;
-  } else if (elapsed < msPerMonth) {
-    const days = Math.floor(elapsed / msPerDay);
-    return days == 1 ? `${days} day ago` : `${days} days ago`;
-  } else if (elapsed < msPerYear) {
-    const months = Math.floor(elapsed / msPerMonth);
-    return months == 1 ? `${months} month ago` : `${months} months ago`;
-  } else {
-    const years = Math.floor(elapsed / msPerYear);
-    return years == 1 ? `${years} year ago` : `${years} years ago`;
-  }
-}
+//   if (elapsed < msPerMinute) {
+//     const seconds = Math.floor(elapsed / msPerSecond);
+//     return `${seconds} seconds ago`;
+//   } else if (elapsed < msPerHour) {
+//     const minutes = Math.floor(elapsed / msPerMinute);
+//     return `${minutes} minutes ago`;
+//   } else if (elapsed < msPerDay) {
+//     const hours = Math.floor(elapsed / msPerHour);
+//     return `${hours} hours ago`;
+//   } else if (elapsed < msPerMonth) {
+//     const days = Math.floor(elapsed / msPerDay);
+//     return days == 1 ? `${days} day ago` : `${days} days ago`;
+//   } else if (elapsed < msPerYear) {
+//     const months = Math.floor(elapsed / msPerMonth);
+//     return months == 1 ? `${months} month ago` : `${months} months ago`;
+//   } else {
+//     const years = Math.floor(elapsed / msPerYear);
+//     return years == 1 ? `${years} year ago` : `${years} years ago`;
+//   }
+// }
 
 populateBio(bio, "bio");
 
