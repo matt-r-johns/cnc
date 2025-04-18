@@ -54,7 +54,7 @@ export const experience = [
     duration: "Feb 2016 - Feb 2021",
     subtitle: "CNC Machinist / Apprentice",
     details: [
-      "Completed apprenticeship and hands-on CNC training.",
+      "ANSTO is home to Australia's only nuclear reactor. Working in the support services workshop I had the privelege of completing my apprenticeship. I completed my Certificate IV in CNC Machining at night concurrently with my Certificate III, meaning that at the end of the 3 years.",
     ],
     icon: "radiation",
   },
