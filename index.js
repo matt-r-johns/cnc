@@ -6,7 +6,7 @@ import {
   quals,
 } from "./user-data/data.js";
 
-  document.title = "Matt Johns – CNC Programmer";
+document.title = "Matt Johns – CNC Programmer";
 
 function populateBio(items, id) {
   const bioTag = document.getElementById(id);
@@ -141,33 +141,33 @@ function populateLinks(items, id) {
       span.append(nav);
       footer.append(span);
     }
-
-    // if (item.label === "copyright-text") {
-    //   let div = document.createElement("div");
-    //   div.className = "copyright-text no-print";
-    //   item.data.forEach(function (copyright) {
-    //     let p = document.createElement("p");
-    //     p.innerHTML = copyright;
-    //     div.append(p);
-    //   });
-    //   footer.append(div);
-    // }
   });
 }
 
 function populateQuals(items, id) {
   const container = document.getElementById(id);
+  
+  // Create the qualifications card if it doesn't exist
+  let qualCard = container.querySelector('.qual-card');
+  if (!qualCard) {
+    qualCard = document.createElement('div');
+    qualCard.className = 'qual-card';
+    container.appendChild(qualCard);
+  }
+  
+  // Create the list inside the card
   const ul = document.createElement("ul");
-
+  ul.id = "quals-list";
+  
   items.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
     ul.appendChild(li);
   });
-
-  container.appendChild(ul);
+  
+  // Add list to the card
+  qualCard.appendChild(ul);
 }
-
 
 function getElement(tagName, className) {
   let item = document.createElement(tagName);
@@ -175,40 +175,39 @@ function getElement(tagName, className) {
   return item;
 }
 
-// function getBlogDate(publishDate) {
-//   const elapsed = Date.now() - Date.parse(publishDate);
+// Add CSS styles for the qual-card
+function addQualStyles() {
+  const style = document.createElement('style');
+  style.textContent = `
+    .qual-card {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      width: 100%;
+    }
+    
+    #quals-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    
+    #quals-list li {
+      padding: 5px 0;
+    }
+  `;
+  document.head.appendChild(style);
+}
 
-//   // Time conversions in milliseconds
-//   const msPerSecond = 1000;
-//   const msPerMinute = msPerSecond * 60;
-//   const msPerHour = msPerMinute * 60;
-//   const msPerDay = msPerHour * 24;
-//   const msPerMonth = msPerDay * 30;
-//   const msPerYear = msPerDay * 365;
-
-//   if (elapsed < msPerMinute) {
-//     const seconds = Math.floor(elapsed / msPerSecond);
-//     return `${seconds} seconds ago`;
-//   } else if (elapsed < msPerHour) {
-//     const minutes = Math.floor(elapsed / msPerMinute);
-//     return `${minutes} minutes ago`;
-//   } else if (elapsed < msPerDay) {
-//     const hours = Math.floor(elapsed / msPerHour);
-//     return `${hours} hours ago`;
-//   } else if (elapsed < msPerMonth) {
-//     const days = Math.floor(elapsed / msPerDay);
-//     return days == 1 ? `${days} day ago` : `${days} days ago`;
-//   } else if (elapsed < msPerYear) {
-//     const months = Math.floor(elapsed / msPerMonth);
-//     return months == 1 ? `${months} month ago` : `${months} months ago`;
-//   } else {
-//     const years = Math.floor(elapsed / msPerYear);
-//     return years == 1 ? `${years} year ago` : `${years} years ago`;
-//   }
-// }
+// Add styles when document loads
+document.addEventListener('DOMContentLoaded', addQualStyles);
 
 populateBio(bio, "bio");
 populateSkills(skills, "skills");
-populateQuals(quals, "quals");
 populateExp_Edu(experience, "experience");
 populateExp_Edu(education, "education");
+
+// Call populateQuals after DOMContentLoaded to ensure the container exists
+document.addEventListener('DOMContentLoaded', () => {
+  populateQuals(quals, "quals");
+});
