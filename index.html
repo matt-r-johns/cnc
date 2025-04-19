@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <script type="module" src="index.js"></script>
-    <script src="js/profile-card.js"></script>
   </head>
 
   <body>
@@ -47,8 +45,8 @@
                 <li><a href="#" data-nav-section="about">About</a></li>
                 <li><a href="#" data-nav-section="skills">Skills</a></li>
                 <li><a href="#" data-nav-section="experience">Work Experience</a></li>
-                <li><a href="#" data-nav-section="quals">Other Qualifications</a></li>
                 <li><a href="#" data-nav-section="education">Education</a></li>
+                <li><a href="#" data-nav-section="quals">Other Qualifications</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
               </ul>
             </div>
@@ -74,10 +72,16 @@
                   <h1>Skills</h1>
                 </div>
               </div>
-          
+
               <div id="skills" class="row"></div>
-          
-              <!-- 🔁 Responsive video starts here -->
+
+              <div class="row" style="margin-top: 30px;">
+                <div class="col-md-12 text-center">
+                  <p style="font-weight: bold; font-size: 18px;">See a few examples of toolpaths I have programmed below:</p>
+                </div>
+              </div>
+
+              <!-- Responsive Video -->
               <div class="row" style="margin-top: 30px;">
                 <div class="col-md-12 text-center">
                   <div class="video-container">
@@ -86,22 +90,31 @@
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <p style="margin-top: 10px;">Example toolpath simulation</p>
+                  <p style="margin-top: 10px;">Example Toolpath Simulation x</p>
                 </div>
               </div>
-              <!-- 🔁 Video ends -->
             </div>
           </section>
-          
 
           <section class="colorlib-experience" data-section="experience">
             <div class="colorlib-narrow-content">
-              <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+              <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
                   <h1>Work <span style="color: #f9bf3f">Experience</span></h1>
                 </div>
               </div>
               <div class="timeline-centered" id="experience"></div>
+            </div>
+          </section>
+
+          <section class="colorlib-education" data-section="education">
+            <div class="colorlib-narrow-content">
+              <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+                <div class="about-desc">
+                  <h1>Education</h1>
+                </div>
+              </div>
+              <div class="timeline-centered" id="education"></div>
             </div>
           </section>
 
@@ -114,17 +127,6 @@
                   <div id="quals" class="row"></div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section class="colorlib-education" data-section="education">
-            <div class="colorlib-narrow-content">
-              <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-                <div class="about-desc">
-                  <h1>Education</h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="education"></div>
             </div>
           </section>
 
@@ -143,7 +145,9 @@
               </div>
             </div>
           </section>
-
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
