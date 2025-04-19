@@ -66,30 +66,25 @@
                   <h1>Skills</h1>
                 </div>
               </div>
-
               <div id="skills" class="row"></div>
               <p style="margin-top: 16px; font-weight: bold; font-size: 18px; text-align: center;">
                 See a few examples of toolpaths I have programmed below:
               </p>
-
-              <!-- Video 1 -->
-              <div class="row" style="margin-top: 90px;">
+              <div class="row" style="margin-top: 30px;">
                 <div class="col-md-12 text-center">
-                  <div class="video-container" style="position: relative;">
-                    <video muted playsinline preload="auto">
+                  <div class="video-container">
+                    <video autoplay loop muted playsinline>
                       <source src="videos/Video1.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                   </div>
-                  <p style="margin-top: 10px;">Simultaneous 5-Axis Milling Programming in SolidCAM using a ø10mm Barrel Mill</p>
+                  <p style="margin-top: 10px;">Simultaneous 5-axis Milling Programming in SolidCAM</p>
                 </div>
               </div>
-
-              <!-- Video 2 -->
               <div class="row" style="margin-top: 90px;">
                 <div class="col-md-12 text-center">
-                  <div class="video-container" style="position: relative;">
-                    <video muted playsinline preload="auto">
+                  <div class="video-container">
+                    <video autoplay loop muted playsinline>
                       <source src="videos/toolpath-demo.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -97,12 +92,10 @@
                   <p style="margin-top: 10px;">Multi-Channel Mill-Turn Programming in SolidCAM</p>
                 </div>
               </div>
-
-              <!-- Video 3 -->
-              <div class="row" style="margin-top: 90px;">
+              <div class="row" style="margin-top: 30px;">
                 <div class="col-md-12 text-center">
-                  <div class="video-container" style="position: relative;">
-                    <video muted playsinline preload="auto">
+                  <div class="video-container">
+                    <video autoplay loop muted playsinline>
                       <source src="videos/toolpath-demo.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -140,6 +133,7 @@
               <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
                   <h1>Other <span style="color: #000000">Qualifications</span></h1>
+                  <p>Here are my other qualifications:</p>
                   <div id="quals" class="row"></div>
                 </div>
               </div>
@@ -170,72 +164,5 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const videos = document.querySelectorAll(".video-container video");
-
-        videos.forEach(video => {
-          const button = document.createElement("div");
-          button.className = "video-play-button";
-          button.innerHTML = `<i class="fa fa-play"></i>`;
-          Object.assign(button.style, {
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            fontSize: "30px",
-            color: "#fff",
-            cursor: "pointer",
-            background: "rgba(0,0,0,0.5)",
-            padding: "10px 15px",
-            borderRadius: "50%",
-            display: "none",
-            zIndex: "10"
-          });
-
-          const container = video.parentElement;
-          container.style.position = "relative";
-          container.appendChild(button);
-
-          let hasPlayedOnce = false;
-
-          setTimeout(() => {
-            video.play().catch(e => {
-              console.warn("Autoplay blocked:", e);
-              button.style.display = "block";
-            });
-          }, 300);
-
-          video.addEventListener("ended", () => {
-            hasPlayedOnce = true;
-            button.querySelector("i").className = "fa fa-play";
-            button.style.display = "block";
-          });
-
-          button.addEventListener("click", () => {
-            if (video.paused) {
-              video.play();
-              button.querySelector("i").className = "fa fa-pause";
-              button.style.display = "none";
-            } else {
-              video.pause();
-              button.querySelector("i").className = "fa fa-play";
-              button.style.display = "block";
-            }
-          });
-
-          video.addEventListener("pause", () => {
-            if (hasPlayedOnce) {
-              button.querySelector("i").className = "fa fa-play";
-              button.style.display = "block";
-            }
-          });
-
-          video.addEventListener("play", () => {
-            button.style.display = "none";
-          });
-        });
-      });
-    </script>
   </body>
 </html>
