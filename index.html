@@ -84,45 +84,91 @@
                 See a few examples of toolpaths I have programmed below:
               </p>
             
-              <div class="row" style="margin-top: 30px;">
+              <div class="row" style="margin-top: 90px;">
                 <div class="col-md-12 text-center">
-                  <div class="video-container">
-                    <video autoplay loop muted playsinline>
+                  <div class="video-container" style="position: relative;">
+                    <video muted playsinline>
                       <source src="videos/Video1.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                  </div>
-                  <p style="margin-top: 10px;">Simultaneous 5-axis Milling Programming in SolidCAM</p>
-                </div>
-              </div>
-            </div>
-            
-
-              <div class="row" style="margin-top: 90px;">
-                <div class="col-md-12 text-center">
-                  <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                      <source src="videos/toolpath-demo.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <p style="margin-top: 10px;">Multi-Channel Mill-Turn Programming in SolidCAM</p>
-                </div>
-              </div>
-
-
-              <div class="row" style="margin-top: 90px;">
-                <div class="col-md-12 text-center">
-                  <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                      <source src="videos/toolpath-demo.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
+                    <div class="video-play-button" style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      font-size: 30px;
+                      color: #fff;
+                      cursor: pointer;
+                      background: rgba(0,0,0,0.5);
+                      padding: 10px 15px;
+                      border-radius: 50%;
+                      display: none;
+                      z-index: 10;">
+                      <i class="fa fa-play"></i>
+                    </div>
                   </div>
                   <p style="margin-top: 10px;">Simultaneous 5-Axis Milling Programming in Mastercam</p>
                 </div>
               </div>
+              
+            
+
+            <div class="row" style="margin-top: 90px;">
+              <div class="col-md-12 text-center">
+                <div class="video-container" style="position: relative;">
+                  <video muted playsinline>
+                    <source src="videos/toolpath-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div class="video-play-button" style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 30px;
+                    color: #fff;
+                    cursor: pointer;
+                    background: rgba(0,0,0,0.5);
+                    padding: 10px 15px;
+                    border-radius: 50%;
+                    display: none;
+                    z-index: 10;">
+                    <i class="fa fa-play"></i>
+                  </div>
+                </div>
+                <p style="margin-top: 10px;">Simultaneous 5-Axis Milling Programming in Mastercam</p>
+              </div>
             </div>
+            
+
+
+              <div class="row" style="margin-top: 90px;">
+                <div class="col-md-12 text-center">
+                  <div class="video-container" style="position: relative;">
+                    <video muted playsinline>
+                      <source src="videos/toolpath-demo.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="video-play-button" style="
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      font-size: 30px;
+                      color: #fff;
+                      cursor: pointer;
+                      background: rgba(0,0,0,0.5);
+                      padding: 10px 15px;
+                      border-radius: 50%;
+                      display: none;
+                      z-index: 10;">
+                      <i class="fa fa-play"></i>
+                    </div>
+                  </div>
+                  <p style="margin-top: 10px;">Simultaneous 5-Axis Milling Programming in Mastercam</p>
+                </div>
+              </div>
+              
           </section>
         </section>       
 
@@ -182,5 +228,65 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const videos = document.querySelectorAll(".video-container video");
+    
+        videos.forEach(video => {
+          const button = document.createElement("div");
+          button.className = "video-play-button";
+          button.innerHTML = `<i class="fa fa-play"></i>`;
+          button.style.position = "absolute";
+          button.style.top = "50%";
+          button.style.left = "50%";
+          button.style.transform = "translate(-50%, -50%)";
+          button.style.fontSize = "30px";
+          button.style.color = "#fff";
+          button.style.cursor = "pointer";
+          button.style.background = "rgba(0,0,0,0.5)";
+          button.style.padding = "10px 15px";
+          button.style.borderRadius = "50%";
+          button.style.display = "none";
+          button.style.zIndex = "10";
+    
+          const container = video.parentElement;
+          container.style.position = "relative";
+          container.appendChild(button);
+    
+          video.play();
+          let hasPlayedOnce = false;
+    
+          video.addEventListener("ended", () => {
+            hasPlayedOnce = true;
+            button.querySelector("i").className = "fa fa-play";
+            button.style.display = "block";
+          });
+    
+          button.addEventListener("click", () => {
+            if (video.paused) {
+              video.play();
+              button.querySelector("i").className = "fa fa-pause";
+              button.style.display = "none";
+            } else {
+              video.pause();
+              button.querySelector("i").className = "fa fa-play";
+              button.style.display = "block";
+            }
+          });
+    
+          video.addEventListener("pause", () => {
+            if (hasPlayedOnce) {
+              button.querySelector("i").className = "fa fa-play";
+              button.style.display = "block";
+            }
+          });
+    
+          video.addEventListener("play", () => {
+            button.style.display = "none";
+          });
+        });
+      });
+    </script>
+    
   </body>
 </html>
