@@ -1,6 +1,7 @@
 export const bio = [
   "Hello, I'm Matt Johns,",
   "Applications Engineer & CNC Programmer with a passion for high-precision manufacturing.",
+  "Add more information",
 ];
 
 export const skills = [
