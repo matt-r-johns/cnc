@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="./logo1.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -60,7 +61,11 @@
               <div class="row animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
                   <h1>About</h1>
-                  <div id="bio"></div>
+                  <div id="bio">
+                    <!-- Bio content will be loaded via JavaScript -->
+                    <!-- Example placeholder content -->
+                    <p>CNC Programmer and Applications Engineer with expertise in SolidCAM and Mastercam.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,14 +79,23 @@
                 </div>
               </div>
           
-              <div id="skills" class="row"></div>
+              <div id="skills" class="row">
+                <!-- Skills content will be loaded via JavaScript -->
+                <!-- Example placeholder content -->
+                <div class="col-md-3 col-sm-6">
+                  <div class="skill-card">
+                    <i class="fas fa-code fa-3x"></i>
+                    <h3>CNC Programming</h3>
+                  </div>
+                </div>
+              </div>
           
               <div>
-                <div class="row" style="margin-top: 90px;"></div>
-          
-                <p style="margin-top: 16px; font-weight: bold; font-size: 18px; text-align: center;">
-                  See a few examples of toolpaths I have programmed below:
-                </p>
+                <div class="row" style="margin-top: 60px;">
+                  <div class="col-md-12">
+                    <p class="toolpath-header">See a few examples of toolpaths I have programmed below:</p>
+                  </div>
+                </div>
           
                 <!-- Video 1 -->
                 <div class="row" style="margin-top: 30px;">
@@ -91,34 +105,43 @@
                         <source src="videos/5axis-milling-demo.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
+                      <div class="video-play-button">
+                        <i class="fa fa-play"></i>
+                      </div>
                     </div>
-                    <p style="margin-top: 10px;">Simultaneous 5-axis Milling Programming in SolidCAM x</p>
+                    <p class="video-caption">Simultaneous 5-axis Milling Programming in SolidCAM</p>
                   </div>
                 </div>
           
                 <!-- Video 2 -->
-                <div class="row" style="margin-top: 90px;">
+                <div class="row" style="margin-top: 60px;">
                   <div class="col-md-12 text-center">
                     <div class="video-container">
                       <video autoplay loop muted playsinline>
                         <source src="videos/mill-turn-demo.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
+                      <div class="video-play-button">
+                        <i class="fa fa-play"></i>
+                      </div>
                     </div>
-                    <p style="margin-top: 10px;">Multi-Channel Mill-Turn Programming in SolidCAM</p>
+                    <p class="video-caption">Multi-Channel Mill-Turn Programming in SolidCAM</p>
                   </div>
                 </div>
           
                 <!-- Video 3 -->
-                <div class="row" style="margin-top: 30px;">
+                <div class="row" style="margin-top: 60px;">
                   <div class="col-md-12 text-center">
                     <div class="video-container">
                       <video autoplay loop muted playsinline>
                         <source src="videos/mastercam-demo.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
+                      <div class="video-play-button">
+                        <i class="fa fa-play"></i>
+                      </div>
                     </div>
-                    <p style="margin-top: 10px;">Simultaneous 5-Axis Milling Programming in Mastercam</p>
+                    <p class="video-caption">Simultaneous 5-Axis Milling Programming in Mastercam</p>
                   </div>
                 </div>
               </div>
@@ -127,23 +150,51 @@
               
           <section class="colorlib-experience" data-section="experience">
             <div class="colorlib-narrow-content">
-              <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+              <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
-                  <h1>Work <span style="color: #000000">Experience</span></h1>
+                  <h1>Work <span>Experience</span></h1>
                 </div>
               </div>
-              <div class="timeline-centered" id="experience"></div>
+              <div class="timeline-centered" id="experience">
+                <!-- Experience content will be loaded via JavaScript -->
+                <!-- Example placeholder content -->
+                <article class="timeline-entry">
+                  <div class="timeline-entry-inner">
+                    <div class="timeline-icon">
+                      <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-label">
+                      <h2>Applications Engineer <span>2020-Present</span></h2>
+                      <p>Example position details will be loaded from JavaScript.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </section>
 
           <section class="colorlib-education" data-section="education">
             <div class="colorlib-narrow-content">
-              <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+              <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
                   <h1>Education</h1>
                 </div>
               </div>
-              <div class="timeline-centered" id="education"></div>
+              <div class="timeline-centered" id="education">
+                <!-- Education content will be loaded via JavaScript -->
+                <!-- Example placeholder content -->
+                <article class="timeline-entry">
+                  <div class="timeline-entry-inner">
+                    <div class="timeline-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-label">
+                      <h2>Engineering Degree <span>2010-2014</span></h2>
+                      <p>Example education details will be loaded from JavaScript.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </section>
 
@@ -151,9 +202,18 @@
             <div class="colorlib-narrow-content">
               <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
-                  <h1>Other <span style="color: #000000">Qualifications</span></h1>
+                  <h1>Other <span>Qualifications</span></h1>
                   <p>Here are my other qualifications:</p>
-                  <div id="quals" class="row"></div>
+                  <div id="quals" class="row">
+                    <!-- Qualifications content will be loaded via JavaScript -->
+                    <!-- Example placeholder content -->
+                    <div class="col-md-4">
+                      <div class="qual-card">
+                        <h3>CNC Certification</h3>
+                        <p>Example qualification details.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,19 +225,34 @@
                 <div class="about-desc">
                   <h1>Contact</h1>
                   <p>Feel free to reach out to me directly:</p>
-                  <ul>
-                    <li>Email: <a href="mailto:mattjohns92@gmail.com">mattjohns92@gmail.com</a></li>
-                    <li>Phone (UK): +44 1234 567 890</li>
-                    <li>Phone (AUS): +61 1234 567 890</li>
-                    <li>LinkedIn: <a href="https://linkedin.com/in/matt-r-johns" target="_blank">linkedin.com/in/matt-r-johns</a></li>
+                  <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:mattjohns92@gmail.com">mattjohns92@gmail.com</a></li>
+                    <li><i class="fas fa-phone"></i> Phone (UK): +44 1234 567 890</li>
+                    <li><i class="fas fa-phone"></i> Phone (AUS): +61 1234 567 890</li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/matt-johns" target="_blank">linkedin.com/in/matt-johns</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </section>
+
+          <footer>
+            <div class="colorlib-narrow-content">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p>&copy; <script>document.write(new Date().getFullYear());</script> Matt Johns. All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div><!-- End colorlib-main -->
       </div><!-- End container-wrap -->
     </div><!-- End colorlib-page -->
+
+    <!-- Dark mode toggle button -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle no-print">
+      <i class="fas fa-moon"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
