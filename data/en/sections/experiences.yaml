@@ -20,9 +20,12 @@ experiences:
   - designation: Senior Applications Engineer
     start: May 2024
     responsibilities:
-    - Design and develop XYZ tool for ABC task
-    - Design, develop and manage disaster recovery tool [Xtool](https://www.example.com) that backup Kubernetes volumes, databases, and cluster's resource definition.
-    - Lead backend team.
+    - Delivering training to customers across all modules in the software – from basic Turning and 2.5D Milling to Simultaneous 5-Axis Milling and Swiss-type Mill-Turn machining
+    - Writing and developing updated training material
+    - Post-Processor development and modification to suit customer needs
+    - Providing general technical support to customers, including programming and tooling choice advice
+    - On-site visits to customer businesses to install Post-Processors, conduct software demonstrations and provide bespoke training and support
+    - Operation and maintenance of the Mazak CV5-500 5-axis in the technology centre - used for customer demonstrations and open-house projects
 
 - company:
     name: QE Innovations
@@ -37,10 +40,12 @@ experiences:
     start: October 2022
     end: April 2024
     responsibilities:
-    - Write lots of example codes.
-    - Read lots of examples.
-    - See lots of example videos.
-
+    - Set-up, operation and maintenance of Okuma VTM-2000YB 5-axis lathe
+    - Set-up, operation and maintenance of the production cell containing an Okuma MU400 5-axis mill and a Fanuc robot
+    - Using SolidCAM and Vericut to produce Mill-Turn programs on steel parts weighing up to 4000kg. This comprised of generating a tool library from scratch, including all models and relevant cutting data
+    - Assisting engineers with designs of parts and fixtures, helping them understand the limitations and strengths of the equipment at hand and suggesting improvements to processes wherever possible
+    - Communicating with the management team, machine operators and with relevant departments to ensure prompt delivery of parts
+ 
 - company:
     name: RØDE Microphones.
     url: "https://rode.com/en"
@@ -54,9 +59,11 @@ experiences:
     start: February 2021
     end: October 2022
     responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - I was responsible for producing all Wire-EDM and CNC and manual turning work in the toolroom, along with some 5-axis milling where required. Using Mastercam I would program and operate the following machines daily
+    - Nakamura AS-200Y 4-Axis Lathe with Live Tooling
+    - Makino U3 Wire-EDM 4-Axis
+    - Makino PS-105 3-Axis Mill
+    - Zeiss CMM
 
 - company:
     name: ANSTO.
@@ -71,6 +78,9 @@ experiences:
     start: February 2016
     end: February 2021
     responsibilities:
-    - Count lost of interns.
-    - Count more interns.
-    - Count me as an intern.
+    - Programming and setup of the following CNC machines to produce complex, high-precision nuclear grade components
+    - Mori Seiki 4-axis Mill-Turn Lathe
+    - Eumach 3-axis Vertical Machining Centre
+    - Sodick 4-axis Wire-EDM
+    - Operating a wide variety of manual machines, including milling machines, lathes and surface grinders
+    - Mentoring of apprentices in the workshop, providing knowledge and assistance wherever required, ensuring they are able to complete their work safely and in a timely manner.

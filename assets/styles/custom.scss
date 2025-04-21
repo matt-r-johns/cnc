@@ -2,33 +2,62 @@
 
 @import "@fontsource/mulish/index.css";
 
-/* Center resume button */
+/* ================= GLOBAL RESET ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #b44444;
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= HOME BACKGROUND FALLBACK ================= */
+#homePageBackgroundImageDivStyled {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= RESUME BUTTON ================= */
 .resume-button-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
 }
 
-/* Video wrapper to center and size the video */
+/* ================= VIDEO ================= */
 .custom-video-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   margin: 1rem 0;
+  position: relative;
 }
 
-/* Custom video appearance */
 .custom-video {
   width: 640px;
   height: 360px;
   object-fit: cover;
   border-radius: 8px;
-  display: block;
   background-color: black;
+  display: block;
   margin: 0 auto;
+  controlslist: "nodownload nofullscreen noremoteplayback";
 }
 
-/* HIDE specific video controls — keep play */
+/* Hide unwanted controls (Webkit) */
 .custom-video::-webkit-media-controls-timeline,
 .custom-video::-webkit-media-controls-volume-slider,
 .custom-video::-webkit-media-controls-fullscreen-button,
@@ -39,43 +68,13 @@
   display: none !important;
 }
 
-/* KEEP play button centered */
 .custom-video::-webkit-media-controls-play-button {
   display: block !important;
   margin: auto;
 }
 
-/* Firefox-specific tweaks (if needed) */
-/* Cannot style controls much in Firefox, so leave as is */
-
-/* Card layout adjustments */
-.pub-filtr-item .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.card-header, .card-body, .card-footer {
-  width: 100%;
-}
-
-.card-footer p {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.card-footer p {
-  margin: 0 auto;
-  display: inline-block;
-}
-.custom-video-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  margin: 1rem 0;
+.custom-video::-webkit-media-controls-enclosure {
+  overflow: hidden;
 }
 
 .video-play-btn {
@@ -93,10 +92,174 @@
   justify-content: center;
   cursor: pointer;
 }
-.custom-video {
-  controlslist: "nodownload nofullscreen noremoteplayback";
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+
+  .container,
+  .container-fluid,
+  .row {
+    --bs-gutter-x: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  [class^="col-"],
+  .col,
+  .col-sm-10,
+  .col-sm-8,
+  .col-12,
+  .col-md-10 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
+  }
+
+  background-color: #f4f8f0;
+
+  h3, h5, p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-container,
+  ul.social-link {
+    justify-content: center !important;
+  }
 }
 
-.custom-video::-webkit-media-controls-enclosure {
-  overflow: hidden;
+.custom-summary-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 1rem;
+
+  p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  strong, a, br {
+    display: inline;
+  }
 }
+.about-section {
+  padding-bottom: 3rem !important; // Or adjust the value as needed
+}
+.experiences-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+  background-color: #f4f8f0;
+}
+.education-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+  background-color: #f7f7f6;
+}
+.skills-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+  background-color: #e9eff4;
+}
+.publications-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+  background-color: #f7f7f6;
+}
+.achievements-section {
+  --bs-gutter-x: 0 !important;
+  width: 100vw !important;
+  background-color: #e9eff4;
+}
+/* ================= PUBLICATION CARDS ================= */
+.pub-filtr-item .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  width: 100%;
+}
+
+.card-footer p {
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ================= NAVBAR ACTIVE LINK ================= */
+.navbar .nav-link.active {
+  color: #6a8b66 !important;
+  font-weight: bold;
+  border-bottom: 2px solid #6a8b66 !important;
+  background-color: transparent !important;
+  border-radius: 0;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #6a8b66 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid #6a8b66 !important;
+}
+/* Fix for white bar on left side */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/* Fix any potential container issues */
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow-x: hidden;
+}
+
+/* Ensure no horizontal scrollbars appear */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.education-section {
+  padding-top: 1rem !important; // Try 0 if you want it flush
+}
+
+.pub-filtr-item .card {
+  max-width: 900px; /* Adjust as needed */
+  margin: 2rem auto;
+  padding: 1rem;
+  border: none; /* Removes any default border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.pub-filtr-item .card {
+  border-top: none !important;
+}
+
+// .section-title {
+//   font-size: 2.2rem;
+//   font-weight: 700;
+//   margin-bottom: 1rem;
+//   color: #1f1f1f; /* adjust to suit theme */
+// }

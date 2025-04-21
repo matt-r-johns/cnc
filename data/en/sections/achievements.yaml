@@ -10,19 +10,13 @@ section:
 
 
 achievements:
-  - description: "Completed SolidCAM Advanced Training"
-  - description: "Presented at MACH 2024 Exhibition"
-  - description: "Developed automated quoting tool in Python"
-  - description: "Earned Six Sigma Yellow Belt Certification"
+  - description: "Six Sigma White Belt"
+  - description: "Completed SolidWorks Essentials Training - 5 Days"
+  - description: "Forklift License"
+  - description: "Overhead Crane (Dogman's) License"
+  - description: "Working at Heights"
+  - description: "Confined Space & Operate Breathing Apparatus"
+  - description: "Swagelok Training"
+  - description: "White Card"
 
 
-
-
-
-
-
-
-
-# - title: Best Presenter
-#   image: /images/sections/achievements/presenter.jpg
-#   summary: Best presenter in the 2020 XYZ conference.

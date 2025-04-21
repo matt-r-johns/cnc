@@ -1,8 +1,14 @@
+baseURL: "https://mattj-r-johns.github.io/cnc/"
+
+
 theme: github.com/hugo-toha/toha/v4
 
 params:
   homepage:
     useSectionFiles: true
+
+  background: images/site/background.jpg
+
 
   features:
     theme:
