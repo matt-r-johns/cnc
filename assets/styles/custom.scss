@@ -1,0 +1,102 @@
+@debug "✅ custom.scss is being loaded!";
+
+@import "@fontsource/mulish/index.css";
+
+/* Center resume button */
+.resume-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Video wrapper to center and size the video */
+.custom-video-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Custom video appearance */
+.custom-video {
+  width: 640px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background-color: black;
+  margin: 0 auto;
+}
+
+/* HIDE specific video controls — keep play */
+.custom-video::-webkit-media-controls-timeline,
+.custom-video::-webkit-media-controls-volume-slider,
+.custom-video::-webkit-media-controls-fullscreen-button,
+.custom-video::-webkit-media-controls-current-time-display,
+.custom-video::-webkit-media-controls-time-remaining-display,
+.custom-video::-webkit-media-controls-mute-button,
+.custom-video::-webkit-media-controls-download-button {
+  display: none !important;
+}
+
+/* KEEP play button centered */
+.custom-video::-webkit-media-controls-play-button {
+  display: block !important;
+  margin: auto;
+}
+
+/* Firefox-specific tweaks (if needed) */
+/* Cannot style controls much in Firefox, so leave as is */
+
+/* Card layout adjustments */
+.pub-filtr-item .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-header, .card-body, .card-footer {
+  width: 100%;
+}
+
+.card-footer p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card-footer p {
+  margin: 0 auto;
+  display: inline-block;
+}
+.custom-video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.video-play-btn {
+  position: absolute;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 3rem;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.custom-video {
+  controlslist: "nodownload nofullscreen noremoteplayback";
+}
+
+.custom-video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}

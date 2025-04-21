@@ -1,0 +1,24 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<div class="container-fluid anchor pb-5 achievements-section">
+  {{ if not (.section.hideTitle) }}
+    <h1 class="text-center">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}
+    </h1>
+  {{ else }}
+    <h1 class="text-center" style="display: none">
+      <span id="{{ $sectionID }}"></span>{{ .section.name }}
+    </h1>
+  {{ end }}
+
+  <div class="container">
+    <ul class="list-unstyled text-center">
+      {{ range .achievements }}
+        <li class="mb-3">{{ .description }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</div>

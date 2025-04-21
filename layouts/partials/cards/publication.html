@@ -1,0 +1,71 @@
+{{ $dataCategories := slice "pub-all" }}
+{{ range .categories }}
+  {{ $dataCategories = $dataCategories | append (printf "pub-%s" .) }}
+{{ end }}
+
+<div
+  class="col-12 p-2 pub-filtr-item"
+  data-category='{{ delimit $dataCategories "," }}'
+>
+  <div class="card mt-3">
+    <div class="card-header">
+      <h5 class="card-title mb-0">{{ .title }}</h5>
+      <div class="sub-title">
+        <span>
+          {{ if .publishedIn.url }}
+            <a href="{{ .publishedIn.url }}">{{ .publishedIn.name }}</a>
+          {{ else }}
+            {{ .publishedIn.name }}
+          {{ end }}
+        </span>
+        <span class="ms-2">{{ .publishedIn.date }}</span>
+      </div>
+      <div class="authors">
+        {{ range .authors }}
+          {{ if .url }}
+            <span class="me-2"><a href="{{ .url }}">{{ .name }}</a></span>
+          {{ else }}
+            <span class="me-2">{{ .name }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    {{ if .video }}
+    <div class="custom-video-wrapper position-relative">
+      <video
+        class="custom-video"
+        preload="metadata"
+        poster="/images/site/video-poster1.jpg"
+        onended="this.load(); this.nextElementSibling.style.display='flex'">
+        <source src="{{ .video | relURL }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <button
+        class="video-play-btn"
+        onclick="this.previousElementSibling.play(); this.style.display='none'">
+        ▶
+      </button>
+    </div>
+    {{ end }}
+
+    <div class="card-footer">
+      <p class="text-center">{{ .paper.summary | markdownify }}</p>
+    </div>
+    
+
+    <div class="card-footer">
+      <div class="tags">
+        {{ range .tags }}
+          <span class="btn badge btn-info ms-1 p-2">{{ . }}</span>
+        {{ end }}
+      </div>
+
+      {{ if .paper.url }}
+      <div class="details-btn">
+        <a class="btn btn-outline-info ms-1 ps-2 mb-2" href="{{ .paper.url }}" target="_blank" rel="noopener" role="button">{{ i18n "project_details" }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
