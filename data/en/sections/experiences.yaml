@@ -3,7 +3,7 @@ section:
   name: Work Experience
   id: experiences
   enable: true
-  weight: 4
+  weight: 5
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true 
@@ -12,6 +12,7 @@ section:
 experiences:
 - company:
     name: SolidCAM UK
+    icon: fa-atom
     url: "https://www.solidcam.com"
     location: South Yorkshire, England
     logo: /images/sections/experiences/company1.jpg
@@ -29,6 +30,7 @@ experiences:
 
 - company:
     name: QE Innovations
+    icon: fa-briefcase
     url: "https://qeinnovations.com.au/"
     location: Wollongong, Australia
     logo: /images/sections/experiences/company2.jpg
@@ -47,7 +49,8 @@ experiences:
     - Communicating with the management team, machine operators and with relevant departments to ensure prompt delivery of parts
  
 - company:
-    name: RØDE Microphones.
+    name: RØDE Microphones
+    icon: fa-briefcase
     url: "https://rode.com/en"
     location: Sydney, Australia
     logo: /images/sections/experiences/company3.jpg
@@ -67,6 +70,7 @@ experiences:
 
 - company:
     name: ANSTO.
+    icon: fa-briefcase
     url: "https://www.ansto.gov.au/"
     location: Sydney, Australia
     logo: /images/sections/experiences/company3.jpg

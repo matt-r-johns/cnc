@@ -1,23 +1,22 @@
-{{ $sectionID := replace (lower .section.name) " " "-"  }}
-{{ if .section.id }}
-  {{ $sectionID = .section.id }}
-{{ end }}
-
-<div class="container-fluid anchor pb-5 recent-posts-section">
-  {{ if not (.section.hideTitle) }}
-    <h1 class="text-center">
-        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
-  {{ else }}
-    <h1 class="text-center" style="display: none">
-        <span id="{{ $sectionID }}"></span>{{ .section.name }}</h1>
+<div class="container my-5">
+  <!-- Section Title -->
+  {{ if not .section.hideTitle }}
+    <h1 class="text-center mb-2">{{ .section.name }}</h1>
   {{ end }}
-  <div class="container">
-    <div class="row" id="recent-post-cards">
-      {{ range $post := .posts}}
-        {{ with site.GetPage $post }}
-          {{ partial "cards/post.html" . }}
-        {{ end }}
-      {{ end }}
-    </div>
+
+  <!-- Optional Subtitle -->
+  {{ with .section.subtitle }}
+    <h2 class="text-center fs-5 text-muted mb-4">{{ . }}</h2>
+  {{ end }}
+
+  <!-- 2x2 Grid of Images with Titles and Descriptions -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    {{ range .examples }}
+      <div class="col d-flex flex-column align-items-center">
+        <h5 class="mb-2 text-center">{{ .title }}</h5>
+        <img src="{{ .image | relURL }}" class="img-fluid rounded shadow-sm mb-2" alt="{{ .title }}">
+        <p class="text-muted text-center">{{ .description }}</p>
+      </div>
+    {{ end }}
   </div>
 </div>

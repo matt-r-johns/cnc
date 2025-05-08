@@ -13,8 +13,10 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
-  background-color: #b44444;
+  position: relative;
+  background-color: #ffffff;
   background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
@@ -57,7 +59,6 @@ html, body {
   controlslist: "nodownload nofullscreen noremoteplayback";
 }
 
-/* Hide unwanted controls (Webkit) */
 .custom-video::-webkit-media-controls-timeline,
 .custom-video::-webkit-media-controls-volume-slider,
 .custom-video::-webkit-media-controls-fullscreen-button,
@@ -97,39 +98,41 @@ html, body {
 .about-section {
   --bs-gutter-x: 0 !important;
   width: 100vw !important;
-
-  .container,
-  .container-fluid,
-  .row {
-    --bs-gutter-x: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  [class^="col-"],
-  .col,
-  .col-sm-10,
-  .col-sm-8,
-  .col-12,
-  .col-md-10 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin: 0 !important;
-  }
-
   background-color: #f4f8f0;
+  padding-bottom: 3rem !important;
+}
 
-  h3, h5, p {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.about-section .container,
+.about-section .container-fluid,
+.about-section .row {
+  --bs-gutter-x: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
 
-  .text-container,
-  ul.social-link {
-    justify-content: center !important;
-  }
+.about-section [class^="col-"],
+.about-section .col,
+.about-section .col-sm-10,
+.about-section .col-sm-8,
+.about-section .col-12,
+.about-section .col-md-10 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+.about-section h3,
+.about-section h5,
+.about-section p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-section .text-container,
+.about-section ul.social-link {
+  justify-content: center !important;
 }
 
 .custom-summary-wrapper {
@@ -138,46 +141,57 @@ html, body {
   width: 100%;
   max-width: 800px;
   padding: 0 1rem;
+}
 
-  p {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
+.custom-summary-wrapper p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-  strong, a, br {
-    display: inline;
-  }
+.custom-summary-wrapper strong,
+.custom-summary-wrapper a,
+.custom-summary-wrapper br {
+  display: inline;
 }
-.about-section {
-  padding-bottom: 3rem !important; // Or adjust the value as needed
-}
-.experiences-section {
-  --bs-gutter-x: 0 !important;
-  width: 100vw !important;
-  background-color: #f4f8f0;
-}
-.education-section {
-  --bs-gutter-x: 0 !important;
-  width: 100vw !important;
-  background-color: #f7f7f6;
-}
-.skills-section {
-  --bs-gutter-x: 0 !important;
-  width: 100vw !important;
-  background-color: #e9eff4;
-}
-.publications-section {
-  --bs-gutter-x: 0 !important;
-  width: 100vw !important;
-  background-color: #f7f7f6;
-}
+
+/* ================= SECTION BACKGROUNDS ================= */
+.experiences-section,
+.education-section,
+.skills-section,
+.publications-section,
 .achievements-section {
   --bs-gutter-x: 0 !important;
   width: 100vw !important;
+}
+
+.experiences-section {
+  background-color: #f4f8f0;
+}
+
+.education-section {
+  background-color: #f7f7f6;
+  padding-top: 1rem !important;
+}
+
+.skills-section {
   background-color: #e9eff4;
 }
+
+.publications-section {
+  background-color: #f7f7f6;
+}
+
+.achievements-section {
+  background-color: #e9eff4;
+}
+
 /* ================= PUBLICATION CARDS ================= */
 .pub-filtr-item .card {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: none !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,60 +225,186 @@ html, body {
   background-color: transparent !important;
   border-bottom: 2px solid #6a8b66 !important;
 }
-/* Fix for white bar on left side */
-html, body {
+
+/* ================= HYPERLINK COLORS ================= */
+a {
+  color: #2e7d32;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+/* ================= TIMELINE ================= */
+.corner,
+.corner::before,
+.corner::after {
+  border-color: #6a8b66 !important;
+  border-top-color: #6a8b66 !important;
+  border-right-color: #6a8b66 !important;
+}
+
+.horizontal-line {
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+}
+
+.custom-horizontal-line {
+  height: 3px !important;
+  background-color: #6a8b66 !important;
+  display: block !important;
+  width: 100% !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  position: relative;
+  bottom: 1px;
+}
+
+.timeline .row {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: auto;
+}
+
+.vertical-line.left-line {
+  margin-left: 12px;
+}
+
+.vertical-line.right-line {
+  transform: translateX(-11px);
+}
+
+
+.vertical-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
 }
 
-body {
-  box-sizing: border-box;
+.line-top,
+.line-bottom {
+  width: 3px;
+  background-color: #6a8b66;
+  flex-grow: 1;
+  min-height: 60px;
 }
 
-/* Fix any potential container issues */
-.container-fluid {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  overflow-x: hidden;
+/* Remove conflicting default vertical lines */
+.timeline .col-lg-2::before,
+.timeline .col-lg-2::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: none !important;
+}
+.timeline .col-lg-2 {
+  background: none !important;
+  border: none !important;
 }
 
-/* Ensure no horizontal scrollbars appear */
-.row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #6a8b66;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px #fff;
+  position: relative;
+  z-index: 2;
+  margin: 1rem 0;
 }
 
-.education-section {
-  padding-top: 1rem !important; // Try 0 if you want it flush
+.circle i {
+  font-size: 1rem;
+  line-height: 1;
 }
 
-.pub-filtr-item .card {
-  max-width: 900px; /* Adjust as needed */
-  margin: 2rem auto;
-  padding: 1rem;
-  border: none; /* Removes any default border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-.pub-filtr-item .card {
-  border-top: none !important;
+.circle {
+  background-color: #6a8b66 !important;
 }
 
-// .section-title {
-//   font-size: 2.2rem;
-//   font-weight: 700;
-//   margin-bottom: 1rem;
-//   color: #1f1f1f; /* adjust to suit theme */
-// }// .section-title {
-//   font-size: 2.2rem;
-//   font-weight: 700;
-//   margin-bottom: 1rem;
-//   color: #1f1f1f; /* adjust to suit theme */
-// }
+
+.greeting {
+  font-size: 3.5rem;
+}
+
+#ityped {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+}
+
+.timeline ul {
+  padding-left: 2.75rem; /* or 2rem for deeper indent */
+  margin-top: 0.5rem;
+}
+
+.timeline ul li {
+  padding-left: 0.5rem; /* optional: adds spacing inside the bullet line */
+}
+
+
+
+// Target the timeline dots/circles - keep the background red
+.education-section .icon,
+td.icon div {
+  background-color: #ff0000 !important;
+}
+
+// Make the icons INSIDE the circles white
+.education-section .icon i,
+td.icon div i,
+.icon > *,
+td.icon div > * {
+  color: #ffffff !important;
+}
+
+// Target only the vertical connecting lines - keep them red
+.education-section .line,
+td.line div {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+
+// Restore horizontal lines from circles to cards
+.education-section .line::after,
+td.line div::after,
+.education-info-table .line::before,
+td.line::before {
+  content: "";
+  position: absolute;
+  height: 2px; /* Adjust thickness as needed */
+  background-color: #ff0000 !important;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// NEW ADDITION: Target the blue border on the left of the degree-info cards
+.degree-info.card,
+div.degree-info.card,
+td.details .degree-info.card {
+  border-left-color: #ff0000 !important;
+}
+
+// If it's using a pseudo-element instead of a border
+.degree-info.card::before,
+div.degree-info.card::before,
+td.details .degree-info.card::before {
+  background-color: #ff0000 !important;
+  border-left-color: #ff0000 !important;
+}

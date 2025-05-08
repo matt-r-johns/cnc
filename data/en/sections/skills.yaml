@@ -3,7 +3,7 @@ section:
   name: Skills
   id: skills
   enable: true
-  weight: 3
+  weight: 2
   showOnNavbar: true
   filter: true
 
@@ -14,21 +14,24 @@ skills:
 
 - name: Mastercam
   logo: /images/sections/skills/mastercam.jpg
-  summary: "Using as the main language for professional development. Cap."
+  summary: "Competent with most aspects of the software, from the basics up to advanced 5-axis toolpaths."
 
-- name: TopSolid
-  logo: /images/sections/skills/topsolid.jpg
-  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+# - name: TopSolid
+#   logo: /images/sections/skills/topsolid.jpg
+#   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
 
 - name: SolidWorks
   logo: /images/sections/skills/solidworks.jpg
-  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, ."
+  summary: "Competent with creating models and assemblies for CAM, including configurations and parametric modelling."
 
 - name: Python
   logo: /images/sections/skills/python.jpg
   summary: "Beginner working knowledge of Python. I've made many small windows applications for automating repetetive tasks."
 
+- name: Excel + VBA
+  logo: /images/sections/skills/python.jpg
+  summary: "Strong knowledge of Excel and basic knowledge of VBA."
+
 - name: Placeholder
   logo: /images/sections/skills/python.jpg
   summary: "Placeholder."
-
