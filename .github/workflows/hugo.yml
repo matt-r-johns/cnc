@@ -16,7 +16,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.111.3'
+          hugo-version: '0.123.7'
           extended: true
 
       - name: Build
@@ -29,7 +29,3 @@ jobs:
           external_repository: matt-r-johns/cnc
           publish_branch: gh-pages
           publish_dir: ./public
-          allow_empty_commit: false
-
-
-
